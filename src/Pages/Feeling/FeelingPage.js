@@ -5,7 +5,13 @@ class Feeling extends Component {
   render() {
     return (
       <div>
-        <p>HI I'M IN MY FEELINGS</p>
+        <header>
+          <h2>How Are you Feeling?</h2>
+        </header>
+        <div>
+          <input type="number" placeholder="Enter a number" />
+          <button>Submit</button>
+        </div>
       </div>
     );
   }

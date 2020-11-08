@@ -32,6 +32,7 @@ class App extends Component {
               <Link to="/comments">Leave a Comment</Link>
             </button>
           </nav>
+          <br />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
           <br />

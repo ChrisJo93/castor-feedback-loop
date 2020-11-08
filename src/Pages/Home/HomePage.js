@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link, withRouter } from 'react-router-dom';
 
 class HomePage extends Component {
   toFeeling = (event) => {
@@ -9,10 +8,19 @@ class HomePage extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.toFeeling}>Click Here for FeedBack Form!</button>
+        <p>Welcome to the Feedback Form!</p>
+        <p>
+          We ask for feedback in an effort to better tailor our service to your
+          needs.
+        </p>
+        <p>
+          If we don't know there's a problem, we can't offer a solution. Please
+          feel free to leave a question in the comments section for followup.
+        </p>
+        <button onClick={this.toFeeling}>Start FeedBack!</button>
       </div>
     );
   }
 }
 
-export default withRouter(HomePage);
+export default HomePage;
