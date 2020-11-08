@@ -8,7 +8,7 @@ class Review extends Component {
       feels: this.props.store.feelsReducer,
       under: this.props.store.underReducer,
       support: this.props.store.supportReducer,
-      comment: this.props.store.commentReducer,
+      comments: this.props.store.commentReducer,
       flagged: false,
     },
   };
@@ -57,7 +57,7 @@ class Review extends Component {
         <p>Feelings: {this.state.newFeedBack.feels}</p>
         <p>Understanding: {this.state.newFeedBack.under}</p>
         <p>Support: {this.state.newFeedBack.support}</p>
-        <p>Comments: {this.state.newFeedBack.comment}</p>
+        <p>Comments: {this.state.newFeedBack.comments}</p>
         <button onClick={this.submitReview}>Submit!</button>
       </div>
     );
