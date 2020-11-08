@@ -8,7 +8,7 @@ class SupportPage extends Component {
 
   submitSupport = (event) => {
     if (this.state.support === '') {
-      alert('You must provide an answer');
+      alert('You must provide an answer'); //form validation
     } else {
       this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support });
       this.setState({

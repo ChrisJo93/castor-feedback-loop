@@ -7,6 +7,14 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
+const commentReducer = (state = [], action) => {
+  if (action.type === 'ADD_COMMENT') {
+    return [...state, action.payload];
+  } else {
+    return state;
+  }
+};
+
 const feelsReducer = (state = [], action) => {
   if (action.type === 'ADD_FEELS') {
     return [...state, action.payload];
