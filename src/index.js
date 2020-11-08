@@ -41,6 +41,7 @@ const underReducer = (state = [], action) => {
 
 const storeInstance = createStore(
   combineReducers({
+    commentReducer,
     feelsReducer,
     supportReducer,
     underReducer,

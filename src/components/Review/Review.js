@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Review extends Component {
+  // need to set state for a new feedback entry
+
+  // need post route here
+
+  // will need to make routes in server to database
+
   render() {
     return (
       <div>
