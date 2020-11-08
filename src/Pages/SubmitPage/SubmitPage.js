@@ -9,8 +9,8 @@ class SubmitPage extends Component {
   render() {
     return (
       <div>
-        <h6>konichiwa</h6>
-        <button onClick={this.startOver}>Done</button>
+        <h1>Nice, thank you for your FeedBack!</h1>
+        <button onClick={this.startOver}>Return</button>
       </div>
     );
   }

@@ -21,7 +21,6 @@ class Review extends Component {
   getFeedBack() {
     Axios.get('/submit')
       .then((response) => {
-        // setState => dispatch
         this.props.dispatch({
           type: 'GET_FEEDBACK',
           payload: response.data,
@@ -48,7 +47,7 @@ class Review extends Component {
 
   submitReview = () => {
     this.postFeedBack(this.state.newFeedBack);
-    //   this.props.history.push('/submit');
+    this.props.history.push('/submit');
   };
 
   render() {
