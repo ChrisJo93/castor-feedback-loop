@@ -7,6 +7,7 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import Header from '../Header/header';
 import FeelingPage from '../../Pages/Feeling/FeelingPage';
 import HomePage from '../../Pages/Home/HomePage';
+import UnderstandingPage from '../../Pages/Understanding/UnderstandingPage';
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
           <br />
           <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
+          <Route exact path="/understanding" component={UnderstandingPage} />
           <br />
         </div>
       </Router>

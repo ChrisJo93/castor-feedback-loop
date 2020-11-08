@@ -3,19 +3,19 @@ import { connect } from 'react-redux';
 
 class Feeling extends Component {
   state = {
-    form: '',
+    feels: '',
   };
 
   updateFeels = (event) => {
     this.setState({
-      form: event.target.value, //updates form to input data
+      feels: event.target.value, //updates form to input data
     });
   };
 
   submitFeels = (event) => {
-    this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.form }); //captures input data and sends to redux store
+    this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.feels }); //captures input data and sends to redux store
     this.setState({
-      form: '', //clears input field by resetting state
+      feels: '', //clears input field by resetting state
     });
     this.props.history.push('/understanding'); //turns the page
   };
@@ -31,7 +31,7 @@ class Feeling extends Component {
             type="number"
             placeholder="Enter a number"
             onChange={this.updateFeels}
-            value={this.state.form}
+            value={this.state.feels}
           />
           <button onClick={this.submitFeels}>Submit</button>
         </div>
