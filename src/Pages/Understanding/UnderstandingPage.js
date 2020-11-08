@@ -38,6 +38,7 @@ class UnderstandingPage extends Component {
           />
           <button onClick={this.submitUnder}>Submit</button>
         </div>
+        <p>Page 2 of 4</p>
       </div>
     );
   }

@@ -39,6 +39,7 @@ class SupportPage extends Component {
           />
           <button onClick={this.submitSupport}>Submit</button>
         </div>
+        <p>Page 3 of 4</p>
       </div>
     );
   }

@@ -39,6 +39,7 @@ class Feeling extends Component {
           />
           <button onClick={this.submitFeels}>Submit</button>
         </div>
+        <p>Page 1 of 4</p>
       </div>
     );
   }

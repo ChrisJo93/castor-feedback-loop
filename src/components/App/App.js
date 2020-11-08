@@ -4,13 +4,14 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // CUSTOM COMPONENTS
-import Header from '../Header/header';
+import Header from '../Header/Header';
 import FeelingPage from '../../Pages/Feeling/FeelingPage';
 import HomePage from '../../Pages/Home/HomePage';
 import UnderstandingPage from '../../Pages/Understanding/UnderstandingPage';
 import SupportPage from '../../Pages/Support/SupportPage';
 import CommentPage from '../../Pages/Comments/CommentPage';
 import test from '../../Pages/Test/test';
+import Review from '../Review/Review';
 
 class App extends Component {
   render() {
@@ -41,6 +42,7 @@ class App extends Component {
           <Route exact path="/understanding" component={UnderstandingPage} />
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />
+          <Route exact path="/review" component={Review} />
 
           <br />
         </div>

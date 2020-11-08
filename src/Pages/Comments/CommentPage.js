@@ -11,6 +11,7 @@ class CommentPage extends Component {
     this.setState({
       comment: '',
     });
+    this.props.history.push('/review');
   };
 
   updateComment = (event) => {
@@ -34,6 +35,7 @@ class CommentPage extends Component {
           />
           <button onClick={this.submitComment}>Submit</button>
         </div>
+        <p>Page 4 of 4</p>
       </div>
     );
   }
