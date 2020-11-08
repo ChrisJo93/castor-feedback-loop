@@ -34,9 +34,6 @@ class App extends Component {
             <button>
               <Link to="/comments">Leave a Comment</Link>
             </button>
-            <button>
-              <Link to="/test">Test</Link>
-            </button>
           </nav>
           <br />
           <Route exact path="/" component={HomePage} />
@@ -44,7 +41,6 @@ class App extends Component {
           <Route exact path="/understanding" component={UnderstandingPage} />
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />
-          <Route exact path="/test" component={test} />
 
           <br />
         </div>
