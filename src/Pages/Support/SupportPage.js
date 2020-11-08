@@ -8,11 +8,14 @@ class SupportPage extends Component {
 
   submitSupport = (event) => {
     console.log(this.state.support);
-    this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support });
-    this.setState({
-      support: '',
-    });
-    this.props.history.push('/comments');
+    if (this.state.support === '') {
+      alert('You must provide an answer');
+    } else {
+      this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support });
+      this.setState({
+        support: '',
+      });
+    }
   };
 
   updateSupport = (event) => {
@@ -32,7 +35,7 @@ class SupportPage extends Component {
             type="number"
             placeholder="Enter a number"
             onChange={this.updateSupport}
-            value={this.state.Support}
+            value={this.state.support}
           />
           <button onClick={this.submitSupport}>Submit</button>
         </div>

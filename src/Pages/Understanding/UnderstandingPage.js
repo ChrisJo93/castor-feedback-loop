@@ -7,11 +7,15 @@ class UnderstandingPage extends Component {
   };
 
   submitUnder = (event) => {
-    this.props.dispatch({ type: 'ADD_UNDER', payload: this.state.under });
-    this.setState({
-      under: '',
-    });
-    this.props.history.push('/support');
+    if (this.state.under === '') {
+      alert('Please Provide Answer');
+    } else {
+      this.props.dispatch({ type: 'ADD_UNDER', payload: this.state.under });
+      this.setState({
+        under: '',
+      });
+      this.props.history.push('/support');
+    }
   };
 
   updateUnder = (event) =>

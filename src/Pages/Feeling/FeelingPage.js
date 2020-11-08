@@ -7,11 +7,15 @@ class Feeling extends Component {
   };
 
   submitFeels = (event) => {
-    this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.feels }); //captures input data and sends to redux store
-    this.setState({
-      feels: '', //clears input field by resetting state
-    });
-    this.props.history.push('/understanding'); //turns the page
+    if (this.state.feels === '') {
+      alert('Please Answer T.T');
+    } else {
+      this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.feels }); //captures input data and sends to redux store
+      this.setState({
+        feels: '', //clears input field by resetting state
+      });
+      this.props.history.push('/understanding'); //turns the page
+    }
   };
 
   updateFeels = (event) => {
