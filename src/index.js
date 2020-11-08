@@ -9,7 +9,8 @@ import logger from 'redux-logger';
 
 const commentReducer = (state = [], action) => {
   if (action.type === 'ADD_COMMENT') {
-    return [...state, action.payload];
+    return [action.payload]; //not spreading previous state means submitting values during review
+    //will reset each time a user goes through feedback
   } else {
     return state;
   }
@@ -17,7 +18,7 @@ const commentReducer = (state = [], action) => {
 
 const feelsReducer = (state = [], action) => {
   if (action.type === 'ADD_FEELS') {
-    return [...state, action.payload];
+    return [action.payload];
   } else {
     return state;
   }
@@ -25,7 +26,7 @@ const feelsReducer = (state = [], action) => {
 
 const supportReducer = (state = [], action) => {
   if (action.type === 'ADD_SUPPORT') {
-    return [...state, action.payload];
+    return [action.payload];
   } else {
     return state;
   }
@@ -33,7 +34,7 @@ const supportReducer = (state = [], action) => {
 
 const underReducer = (state = [], action) => {
   if (action.type === 'ADD_UNDER') {
-    return [...state, action.payload];
+    return [action.payload];
   } else {
     return state;
   }
