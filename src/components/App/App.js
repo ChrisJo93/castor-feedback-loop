@@ -8,6 +8,7 @@ import Header from '../Header/header';
 import FeelingPage from '../../Pages/Feeling/FeelingPage';
 import HomePage from '../../Pages/Home/HomePage';
 import UnderstandingPage from '../../Pages/Understanding/UnderstandingPage';
+import SupportPage from '../../Pages/Support/SupportPage';
 
 class App extends Component {
   render() {
@@ -36,6 +37,7 @@ class App extends Component {
           <Route exact path="/" component={HomePage} />
           <Route exact path="/feeling" component={FeelingPage} />
           <Route exact path="/understanding" component={UnderstandingPage} />
+          <Route exact path="/support" component={SupportPage} />
           <br />
         </div>
       </Router>
