@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-class CommentPage extends Component {
+class Test extends Component {
   render() {
     return (
       <div>
-        <p>work damn you</p>
+        <p>testing</p>
       </div>
     );
   }
@@ -13,4 +13,4 @@ class CommentPage extends Component {
 
 const mapStoreToProps = (store) => ({ store });
 
-export default connect(mapStoreToProps)(CommentPage);
+export default connect(mapStoreToProps)(Test);

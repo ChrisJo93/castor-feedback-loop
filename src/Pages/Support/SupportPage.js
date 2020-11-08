@@ -7,7 +7,6 @@ class SupportPage extends Component {
   };
 
   submitSupport = (event) => {
-    console.log(this.state.support);
     if (this.state.support === '') {
       alert('You must provide an answer');
     } else {
@@ -16,6 +15,7 @@ class SupportPage extends Component {
         support: '',
       });
     }
+    this.props.history.push('/comments');
   };
 
   updateSupport = (event) => {
