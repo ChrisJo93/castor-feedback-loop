@@ -7,19 +7,17 @@ class Feeling extends Component {
   };
 
   updateFeels = (event) => {
-    console.log(this.props.store.feelsReducer);
     this.setState({
-      form: event.target.value,
+      form: event.target.value, //updates form to input data
     });
   };
 
   submitFeels = (event) => {
-    this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.form });
+    this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.form }); //captures input data and sends to redux store
     this.setState({
-      form: '',
+      form: '', //clears input field by resetting state
     });
-    this.props.history.push('/understanding');
-    console.log(this.state.form);
+    this.props.history.push('/understanding'); //turns the page
   };
 
   render() {

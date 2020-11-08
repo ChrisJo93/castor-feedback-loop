@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          {/* Cleaning up app by making header a component */}
           <Header />
           <nav>
             <button>
