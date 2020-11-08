@@ -15,10 +15,10 @@ class Feeling extends Component {
 
   submitFeels = (event) => {
     this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.form });
-    this.postFeels(this.state.form);
     this.setState({
       form: '',
     });
+    this.props.history.push('/understanding');
     console.log(this.state.form);
   };
 
