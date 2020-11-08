@@ -4,7 +4,9 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
 // CUSTOM COMPONENTS
-import Header from '../header/header';
+import Header from '../Header/header';
+import FeelingPage from '../../Pages/Feeling/FeelingPage';
+import HomePage from '../../Pages/Home/HomePage';
 
 class App extends Component {
   render() {
@@ -14,6 +16,9 @@ class App extends Component {
           {/* Cleaning up app by making header a component */}
           <Header />
           <nav>
+            <button>
+              <Link to="/">Home</Link>
+            </button>
             <button>
               <Link to="/feeling">How Do you Feel?</Link>
             </button>
@@ -27,8 +32,8 @@ class App extends Component {
               <Link to="/comments">Leave a Comment</Link>
             </button>
           </nav>
-
-          {/* <Router exact path="/feeling" component={Feeling} /> */}
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/feeling" component={FeelingPage} />
           <br />
         </div>
       </Router>
