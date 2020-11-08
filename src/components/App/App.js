@@ -10,7 +10,6 @@ import HomePage from '../../Pages/Home/HomePage';
 import UnderstandingPage from '../../Pages/Understanding/UnderstandingPage';
 import SupportPage from '../../Pages/Support/SupportPage';
 import CommentPage from '../../Pages/Comments/CommentPage';
-import test from '../../Pages/Test/test';
 import Review from '../Review/Review';
 import SubmitPage from '../../Pages/SubmitPage/SubmitPage';
 

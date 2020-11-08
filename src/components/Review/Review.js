@@ -18,10 +18,27 @@ class Review extends Component {
 
   // will need to make routes in server to database
 
+  getFeedBack() {
+    Axios.get('/submit')
+      .then((response) => {
+        // setState => dispatch
+        this.props.dispatch({
+          type: 'GET_FEEDBACK',
+          payload: response.data,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+        // surface message to user
+        alert('Something went terribly wrong.');
+      });
+  }
+
   postFeedBack(feedBack) {
     Axios.post('/submit', feedBack)
       .then((response) => {
-        console.log('success');
+        this.getFeedBack();
+        console.log('in client post', response);
       })
       .catch((err) => {
         console.log(err);
@@ -30,8 +47,8 @@ class Review extends Component {
   }
 
   submitReview = () => {
-    this.props.history.push('/submit');
     this.postFeedBack(this.state.newFeedBack);
+    //   this.props.history.push('/submit');
   };
 
   render() {

@@ -24,6 +24,14 @@ const feelsReducer = (state = [], action) => {
   }
 };
 
+const feedBack = (state = [], action) => {
+  if (action.type === 'GET_FEEDBACK') {
+    return action.payload;
+  }
+
+  return state;
+};
+
 const supportReducer = (state = [], action) => {
   if (action.type === 'ADD_SUPPORT') {
     return [action.payload];
@@ -44,6 +52,7 @@ const storeInstance = createStore(
   combineReducers({
     commentReducer,
     feelsReducer,
+    feedBack,
     supportReducer,
     underReducer,
   }),

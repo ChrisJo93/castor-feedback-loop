@@ -23,16 +23,16 @@ router.get('/', (req, res) => {
 
 router.post('/', (req, res) => {
   let newFeedBack = req.body;
-  console.log(`Adding new feedback`, newFeedBack);
+  console.log(`Adding new feedback`, newFeedBack.comments);
 
-  let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments", "flagged", "date")
-                    VALUES ($1, $2, $3, $4, $5, $6)`;
+  let queryText = `INSERT INTO "feedback" ("feeling", "understanding", "support", "comments", "flagged")
+                    VALUES ($1, $2, $3, $4, $5)`;
   pool
     .query(queryText, [
       newFeedBack.feeling,
       newFeedBack.understanding,
       newFeedBack.support,
-      newFeedBack.comment,
+      newFeedBack.comments,
       newFeedBack.flagged,
     ])
     .then((result) => {
