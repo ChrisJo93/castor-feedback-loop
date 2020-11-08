@@ -6,7 +6,19 @@ import registerServiceWorker from './registerServiceWorker';
 import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
 
-const storeInstance = createStore(combineReducers({}));
+const feelsReducer = (state = [], action) => {
+  if (action.type === 'ADD_FEELS') {
+    return [...state, action.payload];
+  } else {
+    return state;
+  }
+};
+
+const storeInstance = createStore(
+  combineReducers({
+    feelsReducer,
+  })
+);
 
 ReactDOM.render(
   <Provider store={storeInstance}>
