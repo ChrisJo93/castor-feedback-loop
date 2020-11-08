@@ -12,6 +12,7 @@ import SupportPage from '../../Pages/Support/SupportPage';
 import CommentPage from '../../Pages/Comments/CommentPage';
 import test from '../../Pages/Test/test';
 import Review from '../Review/Review';
+import SubmitPage from '../../Pages/SubmitPage/SubmitPage';
 
 class App extends Component {
   render() {
@@ -43,6 +44,7 @@ class App extends Component {
           <Route exact path="/support" component={SupportPage} />
           <Route exact path="/comments" component={CommentPage} />
           <Route exact path="/review" component={Review} />
+          <Route exact path="/submit" component={SubmitPage} />
 
           <br />
         </div>
