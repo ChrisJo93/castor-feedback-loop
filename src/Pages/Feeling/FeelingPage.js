@@ -6,12 +6,6 @@ class Feeling extends Component {
     feels: '',
   };
 
-  updateFeels = (event) => {
-    this.setState({
-      feels: event.target.value, //updates form to input data
-    });
-  };
-
   submitFeels = (event) => {
     this.props.dispatch({ type: 'ADD_FEELS', payload: this.state.feels }); //captures input data and sends to redux store
     this.setState({
@@ -20,11 +14,17 @@ class Feeling extends Component {
     this.props.history.push('/understanding'); //turns the page
   };
 
+  updateFeels = (event) => {
+    this.setState({
+      feels: event.target.value, //updates form to input data
+    });
+  };
+
   render() {
     return (
       <div>
         <header>
-          <h2>How Are you Feeling?</h2>
+          <h2>How Are You Feeling?</h2>
         </header>
         <div>
           <input

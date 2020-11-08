@@ -14,9 +14,18 @@ const feelsReducer = (state = [], action) => {
   }
 };
 
+const underReducer = (state = [], action) => {
+  if (action.type === 'ADD_UNDER') {
+    return [...state, action.payload];
+  } else {
+    return state;
+  }
+};
+
 const storeInstance = createStore(
   combineReducers({
     feelsReducer,
+    underReducer,
   })
 );
 
