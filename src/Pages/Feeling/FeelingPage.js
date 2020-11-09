@@ -33,7 +33,7 @@ class Feeling extends Component {
         <div>
           <input
             type="number"
-            placeholder="Enter a number"
+            placeholder="Enter a number 1-5"
             onChange={this.updateFeels}
             value={this.state.feels}
           />

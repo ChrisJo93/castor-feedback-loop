@@ -33,7 +33,7 @@ class SupportPage extends Component {
         <div>
           <input
             type="number"
-            placeholder="Enter a number"
+            placeholder="Enter a number 1-5"
             onChange={this.updateSupport}
             value={this.state.support}
           />
