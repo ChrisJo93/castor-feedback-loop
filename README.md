@@ -2,7 +2,7 @@
 
 ## Description
 
-The FeedBack Form Application allows the user to scale offer a value between 1 through 5 based on how they felt.
+The FeedBack Form Application allows the user to scale a value between 1 through 5 based on how they feel.
 The user will be asked how they are feeling, how well they are understanding the material, whether they feel supported by the staff, and will then have an opportunity to comment further.
 
 The user will be given a brief description of the process on the homepage, and can then click "start feedback" to begin filling out the survey.
